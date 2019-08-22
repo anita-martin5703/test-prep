@@ -1,5 +1,6 @@
 package edu.cnm.deepdive;
 
+import java.util.Comparator;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -16,3 +17,11 @@ public class Extractor {
 
 }
 
+  class CaseInsensitiveComparator implements Comparator<Character> {
+
+
+  @Override
+  public int compare(Character c1, Character c2) {
+    return Character.compare(Character.toUpperCase(c1), Character.toUpperCase(c2));
+  }
+}
