@@ -8,14 +8,14 @@ public class Extractor {
 
   public static void main(String[] args) {
     String source = (args.length > 0) ? args[0] : "Hello, World!";
-    Set<Character> chars = new TreeSet<>(new CaseInsensitiveComparator());
+    Set<Character> chars = new TreeSet<>(new Extractor().new CaseInsensitiveComparator());
     for (char c : source.toCharArray()) {
       chars.add(c);
     }
     System.out.println(chars);
   }
 
-  private static class CaseInsensitiveComparator implements Comparator<Character> {
+  private class CaseInsensitiveComparator implements Comparator<Character> {
 
 
     @Override
